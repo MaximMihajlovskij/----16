@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tasks</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <button onclick="showDayOfMonth()">Показать день</button>
+    <button onclick="showNameRepeatedly()">Показать имя и фамилию</button>
+    <button onclick="arrayOperations()">Выполнить операции с массивом</button>
+    <br><br>
+    <label for="x">Введите x:</label>
+    <input type="number" id="x" step="any">
+    <label for="y">Введите y:</label>
+    <input type="number" id="y" step="any">
+    <button onclick="calculateFormula()">Вычислить формулу</button>
+    <div id="result"></div>
+
+    <script>
+        // Функция для вывода номера текущего дня в месяце
+        function showDayOfMonth() {
+            const today = new Date();
+            const dayOfMonth = today.getDate();
+            alert(`Сегодня ${dayOfMonth}-е число месяца.`);
+        }
+
+        // Функция для вывода фамилии и имени n+5 раз
+        function showNameRepeatedly() {
+            const n = 5; // Замените это значение на номер вашего варианта
+            const repetitions = n + 5;
+            const surname = "Иванов"; // Замените на вашу фамилию
+            const name = "Иван"; // Замените на ваше имя
+
+            for (let i = 0; i < repetitions; i++) {
+                document.write(`${surname} ${name}<br>`);
+            }
+        }
+
+        // Функция для операций с массивом
+        function arrayOperations() {
+            // Сформировать массив из 5 целых элементов
+            let array = [4, -1, 7, -3, 2];
+
+            // Найти сумму положительных элементов массива
+            let sumPositive = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] > 0) {
+                    sumPositive += array[i];
+                }
+            }
+
+            // Выполнить сортировку элементов массива по возрастанию
+            array.sort(function(a, b) {
+                return a - b;
+            });
+
+            // Вывод результатов
+            document.write(`Массив: ${array}<br>`);
+            document.write(`Сумма положительных элементов: ${sumPositive}<br>`);
+        }
+        
+          // Создаем строки S1 и S2
+          let S1 = "Максим";
+        let S2 = "Делать лабы";
+
+        // 1. Определяем длину строки S1
+        let lengthS1 = S1.length;
+
+        // 2. Вставляем дополнительные пробелы в строку S2
+        // Для примера вставим два дополнительных пробела между каждым словом
+        S2 = S2.replace(/ /g, "  "); // заменяем каждый пробел на два пробела
+
+        // Заменяем ваше имя в строке S1 на имя "Павел"
+        S1 = S1.replace("ВАШЕ ИМЯ", "Павел");
+
+        // Вывод результатов в документ
+        document.write(`Длина строки S1: ${lengthS1}<br>`);
+        document.write(`Измененная строка S1: ${S1}<br>`);
+        document.write(`Измененная строка S2 с дополнительными пробелами: ${S2}<br>`);
+    </script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url('1.jpg'); /* замените на URL вашего фонового изображения */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#info {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Стиль ссылки до наведения */
+a#favoriteSite {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Стиль ссылки при наведении */
+a#favoriteSite:hover {
+    color: orange;
+    text-decoration: none;
+}
+
+/* Изменение размера изображения */
+#exampleImage {
+    width: 100px; /* Устанавливаем ширину */
+    height: auto; /* Автоматически устанавливаем высоту для сохранения пропорций */
+}
